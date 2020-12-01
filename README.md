@@ -38,12 +38,16 @@ Replace everything on CODE with these show_json's
 #### move(character.real_x,character.real_y)
 Moves the character
 
-#### get_nearest_monster({max_att:100,min_xp:10,target:"Name",no_target:true})
+#### get_nearest_monster({max_att:100,min_xp:10,target:"Name",no_target:true,path_check:true,type:"Name"})
 Return's the nearest monster, you might want to target that return value with `change_target`
 
 target: Picks monsters that only target that name
 
 no_target: Picks monster that aren't targeting anyone
+
+path_check: Checks if the character can move to the target
+
+type: Type of the monsters, for example "goo", can be referenced from `show_json(G.monsters)`
 
 #### use_hp_or_mp()
 Uses a very basic logic to either use hp or mp pot
